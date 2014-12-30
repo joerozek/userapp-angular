@@ -220,7 +220,7 @@ var userappModule = angular.module('UserApp', []);
                             var state = states[this.self.name];
                         }
                         
-                        if (isPublic($route ? $route.current.$$route : state) == false) {
+                        if (isPublic($route ? $route.current.$$route : state.data) == false) {
                             var deferred = $q.defer();
 
                             try {
